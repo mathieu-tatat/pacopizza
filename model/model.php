@@ -9,7 +9,7 @@
 /////////connection a la base de données////////
     try {
         $this->db = new PDO(
-            'mysql:host=localhost:3306;dbname=mathieu-tatat_paco', 'pacoPizz', 'pacoPizz',
+            'mysql:host=localhost:3306;dbname=mathieu-tatat_paco', 'pacoPizz', 'pacoPizza',
             [
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
