@@ -1,0 +1,1831 @@
+@import url('https://fonts.googleapis.com/css2?family=Tai+Heritage+Pro:wght@700&display=swap');
+body {
+    background-color: #E9B7098F;
+    margin: 0;
+    padding: 0;
+}
+main{
+    width: 90%;
+    margin: auto;
+}
+
+.sous_titre{
+    top: 210px;
+    font-family: arial;
+    font-weight: 600;
+}
+
+.note_generale{
+    top: 50px;
+    font-family: arial;
+    font-weight: 600;
+}
+
+.positionAvis{
+    top: -90px;
+    font-family: arial;
+    font-weight: 600;
+}
+.header {
+    background-image: url("../assets/blackBrick.jpg");
+    width: calc(100% - 20px);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.header__logo {
+    height: 150px;
+}
+
+.logoPaco{
+    width: 150px;
+}
+
+.labelLogo{
+    width: 15%;
+}
+.logoProfil{
+    width: 65%;
+}
+.pacoTitle{
+    display: flex;
+}
+
+.titleh1{
+    display: flex;
+    line-height: 56px;
+    font-size: 80px; 
+    color:#ED290E; position: relative;
+    left: 32%;
+}
+
+.header__nav__menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: flex-end;
+    font-size: 18px;
+    margin-left: 10%;
+    position: relative;
+    height: 15px;
+    z-index: 4;
+    justify-content: space-around;
+
+}
+
+.header__nav__menu__link {
+    margin-right: 20px;
+}
+
+.alertMsg{
+    color: red;
+    display: flex;
+    justify-content: center;
+}
+
+.header__nav__menu__link:last-of-type {
+    margin-right: initial;
+}
+
+.header__nav__menu__link a {
+    color: #E9B709;
+    font-family: 'Arial';
+    font-weight: 600;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.neon_bleu{
+    font-size: 22px;
+    color: #45B5F3;
+    border: solid 3px;
+    border-radius: 5px;
+    width: 190px;
+    text-align: center;
+    transform: rotate(-20deg);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4%;
+}
+
+#formSearch {
+    height: 25px;
+    z-index: 2;
+    width: 21%;
+}
+#search {
+    background: #d9c069;
+    border: none;
+    border-radius: 5px;
+    height: 20px;
+    width: 90%;
+}
+
+
+.autocom-box{
+    background: #0C0C0C;
+    text-align: start;
+    width: 76%;
+}
+
+.searchLink{
+    font-size: 12px !important;
+    color: #E9B709 !important;
+    margin: 0% !important;
+}
+.lettre_bleu{
+    font-size: 22px;
+    color: #45B5F3;
+    text-align: center;
+    font-weight: 600;
+    font-family: arial;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.supp{
+    color: white;
+    text-align: center;
+    background: #d58a32;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.neon_rouge{
+    color:#ED290E;
+    font-size: 60px;
+    font-family: 'Tai Heritage Pro', serif;
+}
+
+.neonPizza{
+    width: 150px;
+    position: relative;
+    right: 4%;
+}
+
+.header__nav__menu__link a:after {
+    content: '';
+    height: 2px;
+    background-color: #E9B709;
+    width: 0;
+    bottom: -5px;
+    right: 0;
+    transition: 0.2s all ease-in-out;
+}
+
+.header__nav__menu__link a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.header__nav__logo__link a {
+    color: #ED290E;
+    font-family: 'Arial';
+    font-weight: 600;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.header__nav__logo__link a:after {
+    content: '';
+    height: 2px;
+    background-color: #ED290E;
+    width: 0;
+    bottom: -5px;
+    right: 0;
+    transition: 0.2s all ease-in-out;
+}
+
+.header__nav__logo__link a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.header__burger {
+    display: none;
+
+}
+
+.header__burger svg {
+    stroke: #E9B709;
+    width: 25px;
+    height: 80px;
+}
+
+.header__nav__close {
+    display: none;
+}
+
+.searchButton{
+    background: none;
+}
+
+/* //////////////////// index \\\\\\\\\\\\\\\ */
+
+.box_avis{
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 90%;
+    margin: auto;
+    min-height: 100px;
+    max-height: 280px;
+    border-radius: 5px;
+    scroll-margin: auto;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    scroll-snap-type: y mandatory;
+    overflow: auto;
+    border: solid black 0.6px;
+}
+
+.box_avis_msg{
+    /* background-color: #E9B709; */
+    background-color: #ACA89A52;
+    margin: 5%;
+    width: 90%;
+    margin: auto;
+    min-height: 30px;
+    border-radius: 5px;
+
+    
+}
+
+.nom_date{
+    font-size: 10px;
+    font-weight: 600;
+    font-family: arial;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.msg_avis{
+    padding-left: 5px;
+    Padding-bottom: 5px;
+    font-weight: 600;
+    font-family: arial;
+    font-size: 14px;
+  }
+
+  .form_generale{
+    width: 86%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-family: arial;
+    font-weight: 600;
+}
+
+.form_generale input {
+    padding: 5px;
+    outline: 0;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: black;
+    color: #E9B709;
+}
+
+.form_generale input[type='submit']{
+    background-color: black;
+    border: 1px solid black;
+    color: #E9B709;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.com_avis_generale{
+    display: flex;
+    width: 90%;
+    margin-top:20px;
+    margin-bottom: 20px;
+    margin: auto;
+}
+
+.option_note_generale{
+    padding-top: 20px;
+    display: flex;
+    height: 20px;
+    font-family:arial ;
+    font-weight:600;
+    padding-top: 35px;
+}
+#note_generale_select{
+    background: black;
+    color: #E9B709;
+    text-decoration: none;
+    border: none;
+    text-align: end;
+    border-radius: 5px;
+}
+.button_note_generale{
+    background: black;
+    border: none;
+    color: #E9B709;
+    border-radius: 5px;
+}
+
+.textearea_generale{
+    background: rgba(0, 0, 0, 0.1);
+    border: solid black 0.6px;
+    border-radius: 5px;
+
+}
+
+  /* /////////////////// footer \\\\\\\\\\\\\\\ */
+
+.end_page{
+    background-image: url("../assets/blackBrick.jpg");
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% + 40px);
+}
+
+.left_footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1px;
+    width: 30%
+}
+
+.center_footer{
+    width: 56%;
+    display: flex;
+    justify-content: center;
+    color: #E9B709;
+    align-items: center;
+}
+
+.right_footer{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.link_footer:hover{
+    color: #e9b909a3;
+}
+
+.link_footer{
+    text-decoration: none;
+    color: #E9B709;
+}
+
+.reseauxLogo{
+    width: 13%;
+}
+
+/* ///////////////////// connexion \\\\\\\\\\\\\\\\\\\\\ */
+
+.form_connexion{
+    background: #F2D675;
+    border: solid 2px;
+    border-radius: 5px; 
+    width: 30%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    font-family: arial;
+    font-weight: 600;
+
+}
+
+.form_connexion label {
+    margin: 2px 0;
+}
+
+.form_connexion input {
+    padding: 5px;
+    outline: 0;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.form_connexion input[type='submit']{
+  
+    background-color: black;
+    border: 0.6px solid black;
+    color: #F2D675;
+    margin: auto;
+    border-radius: 5px; 
+    margin-top: 12px;
+}
+
+.redir{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_connexion.redir {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.redir a {
+    color: #45B5F3;    
+    font-size: 14px;
+    text-decoration: 0;
+}
+
+.redir a:hover {
+    text-decoration: underline;
+}
+
+.titre_form{
+    display: flex;
+    justify-content: center;
+}
+/* //////////////////////// inscription \\\\\\\\\\\\\\\\\\\\\\\ */
+.form_inscription{
+   
+    border: solid 2px;
+    border-radius: 5px; 
+    width: 30%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    font-family: arial;
+    font-weight: 600;
+    background:#F2D675;
+}
+
+.form_inscription label {
+    margin: 2px 0;
+}
+
+.form_inscription input {
+    padding: 5px;
+    outline: 0;
+    border-radius: 5px;
+    border: 0.6px solid black;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.form_inscription input[type='submit']{
+    background-color: black;
+    border: 1px solid black;
+    color: #F2D675;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 12px;
+}
+
+button{
+    background: black;
+    width: fit-content;
+    color: #F2D675;
+    border: none;
+    border-radius: 5px;
+    padding: 4px;
+    margin: auto;
+    margin-top: auto;
+    margin-top: 12px;
+}
+
+.form_inscription.redir {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* ///////////////////// page pizza \\\\\\\\\\\\\\\\\\\\\ */
+.pizza_title{
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+}
+
+.pizza_container{
+    width: 80%;
+    display: flex;
+    margin: auto;
+    font-weight:600;
+    font-family: arial;
+    border: solid black 0.6px;
+    border-radius: 5px;
+    padding: 4px;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 35px #3232321a,0 5px 15px #0000001a;
+}
+
+.infos_pizza{
+    padding: 20px;   
+    margin: auto;
+    width: 40%; 
+    
+}
+
+.price{
+    margin: auto;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 5px;
+    background-color: black;
+    color:#E9B709;
+    border-radius: 5px;
+    margin-bottom: 15%;
+    margin-top: 10%
+}
+
+.note_pizza{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20%;
+}
+
+.box_com_pizza{
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 90%;
+    margin: auto;
+    min-height: 100px;
+    max-height: 280px;
+    border-radius: 5px;
+    scroll-margin: auto;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    scroll-snap-type: y mandatory;
+    overflow: auto;
+    border: solid black 0.6px;
+   
+}
+.box_com_msg{
+    margin: 5%;
+    width: 90%;
+    margin: auto;
+    min-height: 30px;
+    border-radius: 5px;
+    background-color: #ACA89A52;
+}
+
+.form_pizza{
+    width: 86%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-family: arial;
+    font-weight: 600;
+}
+
+.form_pizza input {
+    padding: 5px;
+    outline: 0;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: black;
+    color: #E9B709;
+}
+.box_pizz{
+    width: 60%;
+  }
+
+.img_pizza{
+    width: 100%;
+    height: 500px;
+}
+
+.form_pizza input[type='submit']{
+    background-color: black;
+    border: 1px solid black;
+    color: #E9B709;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.com_avis_pizza{
+    display: flex;
+    width: 90%;
+    margin-top:20px;
+    margin-bottom: 20px;
+    margin: auto;
+}
+
+.option_note_pizza{
+    padding-top: 20px;
+    display: flex;
+    height: 20px;
+    font-family:arial ;
+    font-weight:600;
+}
+#note_pizza_select{
+    background: black;
+    color: #E9B709;
+    text-decoration: none;
+    border: none;
+    text-align: end;
+    border-radius: 5px;
+}
+.button_note_pizza{
+    background: black;
+    border: none;
+    color: #E9B709;
+    border-radius: 5px;
+}
+
+.textearea_pizza{
+    background: rgba(0, 0, 0, 0.1);
+    border: solid black 0.6px;
+    border-radius: 5px;
+
+}
+
+
+/* ///////////////////// page catégories \\\\\\\\\\\\\\\\\\\\\ */
+.categories_box{
+    display:flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    transition: transform 0.3s;
+    transform: translate3d(0, 0, 0);
+    min-height: 450px;
+}
+
+  .categories__box::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+
+.categories_item {
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 15px 35px #3232321a,0 5px 15px #0000001a;
+    margin-right: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: transform 0.6s;
+    transform: translate3d(0, -1px, 0);
+    width: 195px;
+}
+
+.cat_link{
+    text-decoration: none;
+    
+}
+
+.categories_item:hover  {
+    transform: rotate(-5deg) translate3d(0, -5px, 0); 
+}
+
+.item_categories_image{
+    width: 300px;
+    height: 250px; 
+  
+}
+
+.categories_item img {
+    display: block;
+    width: 100%;
+    height: 154px;
+}
+
+.categories_infos{
+    padding: 20px;
+    width: 15%;
+}
+
+.categories_price{
+    margin: auto;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #E9B709;
+    font-size: 16px;
+    background-color: black;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.categories_note{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20%;
+}
+
+.categories_link{
+    text-decoration: none;
+    color: black;
+}
+
+.categories_link:hover{
+    text-decoration: none;
+    color: rgb(80, 65, 4);
+}
+
+.categories_title{
+    
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    
+}
+
+/* ///////////////////// admin \\\\\\\\\\\\\\\\\\\\\ */
+
+.background_admin {
+    background-image: url(../assets/pizzaBack.png);
+    background-position: top;
+    padding: 40px;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    width: 85%;
+    margin: auto;
+}
+
+.form_creation{
+   
+    border: solid 1px;
+    border-radius: 5px; 
+    width: 30%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    font-family: arial;
+    font-weight: 600;
+    background: #F2D675;
+}
+
+.form_creation label {
+    margin: 2px 0;
+}
+
+.form_creation input {
+    padding: 5px;
+    outline: 0;
+    border-radius: 5px;
+    border: 0.6px solid black;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.form_creation input[type='submit']{
+    
+    background-color: black;
+    border: 1px solid black;
+    color: #F2D675;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 12px;
+}
+
+.form_creation textarea {
+    
+    padding: 5px;
+    outline: 0;
+    border-radius: 5px;
+    border: 0.6px solid black;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.form_creation.redir {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#select_categorie{
+    width: 30%;
+    background: black;
+    border: none;
+    color: #F2D675;
+    border-radius: 5px;
+}
+
+.titre_admin{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+}
+
+.space_nom_pizzas{
+    border-radius: 5px; 
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    font-family: arial;
+    font-weight: 600;
+    background: #F2D675;
+    border: solid 1px;
+}
+
+.liste_pizzas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photo_liste_admin{
+    width: 150px;
+    height: 150px;
+}
+
+
+.space_pizza{
+    width: 33%;
+    display: flex;
+    justify-content: end;
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    border: solid 0.5px #8E835E;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.space_pizza:hover{
+    color: #5e5b52;
+}
+
+small{
+    color: #ED290E;
+}
+
+.logoAdmin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 25%;
+}
+img:hover{
+    stroke: #8E835E;
+}
+
+/* ///////////////////// page Mentions légales \\\\\\\\\\\\\\\\\\\\\ */
+.form_mentions {
+    border: solid 1px;
+    border-radius: 5px;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    font-family: arial;
+    font-weight: 600;
+    background: #F2D675;
+    height: 500px;
+    overflow: auto;
+}
+
+/* ///////////////////// page Contact \\\\\\\\\\\\\\\\\\\\\ */
+.form_contact {
+    border: solid 1px;
+  border-radius: 5px;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5%;
+  margin-bottom: 1%;
+  display: flex;
+  padding: 20px;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+  font-family: arial;
+  font-weight: 600;
+  background: #F2D675;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+    
+.map-responsive {
+    overflow:hidden;
+    padding-bottom:29.25%;
+    position:relative;
+    height:0;
+}
+
+.map-responsive iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.contact-link {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+
+.contact-link:hover{
+    color:#5e5b52
+}
+
+.icone-contact {
+        width: 7%;
+      
+}
+
+.image-contact{
+    width: 40% ;
+}
+
+.text-contact{
+    width:40% ;
+    line-height: 1.5;
+}
+
+/* ///////////////////// media queries \\\\\\\\\\\\\\\\\\\\\ */
+/* ///////////////////// mobile screen \\\\\\\\\\\\\\\\\\\\\ */
+
+@media screen and (min-width:300px) and (max-width: 499px){
+/* @media (max-width: 415px) { */
+
+    main {
+        width: 90%;
+        margin: auto;
+        font-size: 12px;
+      }
+
+/* /////////////////// header \\\\\\\\\\\\\\\\\\\\*/
+    .header {
+        background-image: url("../assets/blackBrick.jpg");
+        width: calc(100% - 20px);
+        padding: 0px 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 135px;
+    }
+
+    .header__logo {
+        height: 70px;
+        width: 30%;
+    }
+
+    .logoPaco{
+        width: 66%;
+    }
+
+    .header__burger {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        left: 92%;
+        width: 25px;
+    }
+
+    .header__nav {
+        position: absolute;
+        top: 16%;
+        right: 0;
+        width: 300px;
+        height: 100vh;
+        background-color: #000000cf;
+        display: flex;
+        padding-top: 12%;
+        justify-content: center;
+        display: none;
+        z-index: 3;
+    }
+
+    #formSearch {
+        height: 25px;
+        z-index: 2;
+        width: 90%;
+    }
+
+    #search {
+        background: #d9c069;
+        border: none;
+        border-radius: 5px;
+        height: 20px;
+        width: 95%;
+    }
+
+
+    .header__nav.open {
+        display: flex;
+        animation: transformMenu 300ms ease-in-out forwards;
+    }
+
+    @keyframes transformMenu {
+        0% {
+            transform: translateX(100%);
+        }
+
+        100% {
+            transform: initial;
+        }
+    }
+
+      .logoProfil{
+        width: 65%;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .pacoTitle{
+        display: flex;
+        width: 20%;
+    }
+    
+    .titleh1 {
+        display: flex;
+        line-height: 21px;
+        font-size: 30px;
+        color: #ED290E;
+        position: relative;
+        left: 25%;
+    }
+
+    .neonPizza{
+        width: 55px;
+        position: relative;
+        right: -2%;
+    }
+
+    .supp{
+        color: white;
+        text-align: center;
+        background: #d58a32;
+        padding: 2px;
+        border-radius: 5px;
+        width: 17%;
+        font-size: 10px;
+        position: absolute;
+        top: 67px;
+        left: 234px;
+    }
+
+    .lettre_bleu {
+        font-size: 9px;
+        color: #45B5F3;
+        text-align: center;
+        font-weight: 600;
+        font-family: arial;
+        flex-direction: column;
+        justify-content: center;
+        width: 32%;
+        position: relative;
+        left: 18px;
+      }
+
+    .header__nav__menu {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .header__nav__menu__link {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .header__nav__menu__link a {
+        font-size: 16px;
+    }
+
+    .header__nav__close {
+        display: block;
+        cursor: pointer;
+        
+    }
+
+    .header__nav__close svg {
+        stroke: #E9B709;
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+
+    .overlay-menu-mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: none;
+    }
+
+    .overlay-menu-mobile.open {
+        display: block;
+    }
+
+    .neon_bleu{
+        font-size: 10px;
+        color: #45B5F3;
+        border: solid 2px;
+        border-radius: 5px;
+        width: 21%;
+        text-align: center;
+        transform: rotate(-10deg);
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.4%;
+        position: absolute;
+        top: 60px;
+        left: 62px;
+    }
+/* ////////////////// footer\\\\\\\\\\\\\\\\\\\ */
+
+    .end_page{
+        background-image: url("../assets/blackBrick.jpg");
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        width: calc(100% + 0px);
+    }
+    
+    .left_footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        line-height: 1px;
+        width: 20%;
+        font-size: 10px;
+        margin: auto;
+    }
+    
+    .center_footer{
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        color: #E9B709;
+        align-items: center;
+        font-size: 8px;
+    }
+    
+    .right_footer{
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .reseauxLogo{
+        width: 30%;
+    }
+    
+
+    .nom_date{
+        font-size: 7px;
+    }
+    
+    .msg_avis{
+            font-size: 12px;
+    }
+    
+
+    .form_connexion{
+        width: 80%;
+        margin-bottom: 35%;
+    }
+
+    .form_inscription{
+        width: 80%;
+    }
+
+    .background_admin {
+        padding-top: 40px;
+        padding-right: 20px;
+        padding-bottom: 40px;
+        padding-left: 20px;
+        width: 90%;
+        margin: auto;
+      
+    }
+
+    .photo_liste_admin{
+        width: 120px;
+        height: 120px;
+    }
+    
+
+    .space_pizza {
+        width: 80%;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .space_nom_pizzas {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .form_creation {
+        width: 90%;
+    }
+
+    .titre_admin {
+        top: 15px;
+    }
+    .categories_item {
+        margin-top: 20px;
+        background-color: #fff;
+        box-shadow: 0 15px 35px #3232321a,0 5px 15px #0000001a;
+        margin-right: 20px;
+        font-size: 13px;
+        border-radius: 5px;
+        transition: transform 0.6s;
+        transform: translate3d(0, -1px, 0);
+        width: 100%;
+    }
+    
+    .categories_item:hover  {
+        transform: rotate(-5deg) translate3d(0, -5px, 0); 
+    }
+
+    .categories_item img {
+        display: block;
+        width: 100%;
+        height: 200px;
+      }
+
+    .categories_box{
+        min-height: 450px;
+        align-content: center;
+        margin: auto;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-bottom: 20px;
+    }
+
+    .cat_link{
+        text-decoration: none;
+        width: 65%;
+    }
+
+    .categories_title {
+        font-size: 12px;
+      }
+
+    .categories_price {
+        width: 35%;
+        font-size: 12px;
+        border-radius: 5px;
+      }
+
+    .pizza_title{
+        font-size: 18px;
+      }
+
+    .pizza_container {
+        width: 90%;
+        display: flex;
+        margin: auto;
+        font-weight: 600;
+        font-family: arial;
+        border: solid black 0.6px;
+        border-radius: 5px;
+        padding: 4px;
+        background-color: rgba(0, 0, 0, 0.1);
+        box-shadow: 0 15px 35px #3232321a,0 5px 15px #0000001a;
+        flex-direction: column;
+    }
+
+    .box_pizz{
+        width: 100%;
+    }
+  
+    .img_pizza{
+        width: 100%;
+        height: 300px;
+    }
+
+    .infos_pizza {
+        padding: 2px;
+        margin: auto;
+        width: 90%;
+    }
+
+    .price {
+        margin: auto;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        background-color: black;
+        color: #E9B709;
+        border-radius: 5px;
+    }
+
+    .note_pizza {
+        margin-bottom: 5%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .com_avis_pizza {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        flex-direction: column;   
+        justify-content: center;
+        align-content: center;
+    }
+
+    .form_pizza {
+        padding: 5px;
+        width: 90%;
+    }
+
+    .option_note_pizza {
+        padding-top: 5px;
+        display: flex;
+        height: 20px;
+        font-family: arial;
+        font-weight: 600;
+        margin: auto;
+        padding-bottom: 10px;
+    }
+
+.image-contact{
+    width: 100% ;
+}
+
+.text-contact{
+    width:100% ;
+    line-height: 1.2;
+}
+
+
+
+}
+
+
+
+/* ///////////////////// media queries \\\\\\\\\\\\\\\\\\\\\ */
+/* ///////////////////// tablette screen \\\\\\\\\\\\\\\\\\\\\ */
+
+@media screen and (min-width: 500px) and (max-width: 1200px) {
+   
+        main {
+            width: 90%;
+            margin: auto;
+            font-size: 14px;
+          }
+    
+    /* /////////////////// header \\\\\\\\\\\\\\\\\\\\*/
+        .header {
+            background-image: url("../assets/blackBrick.jpg");
+            width: calc(100% - 20px);
+            padding: 0px 10px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            height: 180px;
+        }
+    
+        .header__logo {
+            height: 80px;
+            width: 15%;
+        }
+    
+        .logoPaco{
+            width: 80%;
+        }
+
+        .header__burger {
+            display: block;
+            cursor: pointer;
+            position: relative;
+            left: 92%;
+            width: 25px;
+        }
+        
+        .header__burger svg {
+            stroke: #E9B709;
+            width: 25px;
+            height: 25px;
+        }
+
+        .header__nav {
+            position: absolute;
+            top: 16%;
+            right: 0;
+            width: 300px;
+            height: 100vh;
+            background-color: #000000cf;
+            display: flex;
+            padding-top: 8%;
+            justify-content: center;
+            display: none;
+            z-index: 3;
+        }
+
+        #formSearch {
+            height: 25px;
+            z-index: 2;
+            width: 90%;
+        }
+
+        #search {
+            background: #d9c069;
+            border: none;
+            border-radius: 5px;
+            height: 20px;
+            width: 95%;
+        }
+
+        .header__nav.open {
+            display: flex;
+            animation: transformMenu 300ms ease-in-out forwards;
+        }
+    
+        @keyframes transformMenu {
+            0% {
+                transform: translateX(100%);
+            }
+    
+            100% {
+                transform: initial;
+            }
+        }
+    
+        .logoProfil{
+            width: 65%;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+    
+        .pacoTitle{
+            display: flex;
+            width: 20%; 
+        }
+        
+        .titleh1 {
+            display: flex;
+            line-height: 39px;
+            font-size: 55px;
+            color: #ED290E;
+            position: relative;
+            left: 16%;
+        }
+    
+        .neonPizza{
+            width: 92px;
+            position: relative;
+            right: 2%;
+        }
+    
+        .supp{
+            color: white;
+            text-align: center;
+            background: #d58a32;
+            padding: 2px;
+            border-radius: 5px;
+            width: 16%;
+            font-size: 14px;
+        }
+    
+        .lettre_bleu {
+            font-size: 12px;
+            color: #45B5F3;
+            text-align: center;
+            font-weight: 600;
+            font-family: arial;
+            flex-direction: column;
+            justify-content: center;
+            width: 21%;
+            position: relative;
+            left: 18px;
+          }
+    
+        .header__nav__menu {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+    
+        .header__nav__menu__link {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    
+        .header__nav__menu__link a {
+            font-size: 16px;
+        }
+    
+        .header__nav__close {
+            display: block;
+            cursor: pointer;
+            
+        }
+    
+        .header__nav__close svg {
+            stroke: #E9B709;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 16px;
+            right: 48px;
+        }
+    
+        .overlay-menu-mobile {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: none;
+        }
+    
+        .overlay-menu-mobile.open {
+            display: block;
+        }
+    
+        .neon_bleu{
+            font-size: 14px;
+            color: #45B5F3;
+            border: solid 2px;
+            border-radius: 5px;
+            width: 20%;
+            text-align: center;
+            transform: rotate(-10deg);
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.4%;
+        }
+    /* ////////////////// footer\\\\\\\\\\\\\\\\\\\ */
+    
+        .end_page{
+            background-image: url("../assets/blackBrick.jpg");
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            width: calc(100% + 0px);
+        }
+        
+        .left_footer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            line-height: 1px;
+            width: 20%;
+            font-size: 12px;
+            margin: auto;
+        }
+        
+        .center_footer{
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            color: #E9B709;
+            align-items: center;
+            font-size: 10px;
+        }
+        
+        .right_footer{
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    
+        .reseauxLogo{
+            width: 18%;
+        }
+        
+    
+        .nom_date{
+            font-size: 7px;
+        }
+        
+        .msg_avis{
+                font-size: 12px;
+          }
+    
+        .form_connexion{
+            width: 80%;
+            margin-bottom: 35%;
+        }
+    
+        .form_inscription{
+            width: 80%;
+        }
+    
+        .background_admin {
+            padding-top: 40px;
+            padding-right: 20px;
+            padding-bottom: 26%;
+            padding-left: 20px;
+            width: 90%;
+            margin: auto;
+          
+        }
+    
+        .space_pizza {
+            width: 40%;
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+        }
+        .photo_liste_admin{
+            width: 150px;
+            height: 150px;
+        }
+
+        .space_nom_pizzas {
+            width: 90%;
+            padding: 10px;
+        }
+    
+        .form_creation {
+            width: 90%;
+            padding-bottom: 15%;
+        }
+    
+        .titre_admin {
+            top: 15px;
+        }
+        .categories_item {
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 15px 35px #3232321a,0 5px 15px #0000001a;
+            margin-right: 20px;
+            font-size: 13px;
+            border-radius: 5px;
+            transition: transform 0.6s;
+            transform: translate3d(0, -1px, 0);
+            width: 100%;
+        }
+        
+        .categories_item:hover  {
+            transform: rotate(-5deg) translate3d(0, -5px, 0); 
+        }
+    
+        .categories_item img {
+            display: block;
+            width: 100%;
+            height: 200px;
+          }
+    
+        .categories_box{
+            min-height: 450px;
+            align-content: center;
+            margin: auto;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding-bottom: 20px;
+        }
+    
+        .cat_link{
+            text-decoration: none;
+            width: 40%;
+        }
+    
+        .categories_title {
+            font-size: 12px;
+          }
+    
+        .categories_price {
+            width: 35%;
+            font-size: 12px;
+            border-radius: 5px;
+          }
+    
+        .pizza_title{
+            font-size: 18px;
+          }
+    
+        .pizza_container {
+            width: 90%;
+            display: flex;
+            margin: auto;
+            font-weight: 600;
+            font-family: arial;
+            border: solid black 0.6px;
+            border-radius: 5px;
+            padding: 4px;
+            background-color: rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 35px #3232321a,0 5px 15px #0000001a;      
+        }
+    
+        .box_pizz{
+            width: 100%;
+        }
+      
+        .img_pizza{
+            width: 100%;
+            height: 300px;
+        }
+    
+        .infos_pizza {
+            padding: 2px;
+            margin: auto;
+            width: 90%;
+        }
+    
+        .price {
+            margin: auto;
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            background-color: black;
+            color: #E9B709;
+            border-radius: 5px;
+        }
+    
+        .note_pizza {
+            margin-bottom: 5%;
+            display: flex;
+            justify-content: center;
+        }
+    
+        .com_avis_pizza {
+            display: flex;
+            width: 90%;
+            margin: auto;
+            flex-direction: column;   
+            justify-content: center;
+            align-content: center;
+        }
+    
+        .form_pizza {
+            padding: 5px;
+            width: 90%;
+        }
+    
+        .option_note_pizza {
+            padding-top: 5px;
+            display: flex;
+            height: 20px;
+            font-family: arial;
+            font-weight: 600;
+            margin: auto;
+            padding-bottom: 10px;
+        }
+
+        .image-contact{
+            width: 85%;
+        }
+        
+        .text-contact{
+            width:85%;
+            line-height: 1.5;
+        }
+    }
+
+    
+  
