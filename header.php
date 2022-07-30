@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <?php $pizzaCategorie = new Pizza ;?>
 <?php $categorie = $pizzaCategorie->selectCategorieName();?>
 
